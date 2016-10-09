@@ -61,16 +61,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var wrapper = document.getElementById('wrapper');
   var images = ["alien", "bolt", "duke", "eyes", "labyrinth", "trousers","alien", "bolt", "duke", "eyes", "labyrinth", "trousers"];
+  var counter = 0;
+
+  // create buttons
 
   for (i=0; i<images.length; i++) {
     var newButton = document.createElement("button");
     newButton.setAttribute('data-img', images[i]);
     wrapper.appendChild(newButton);
   }
+
+  // add event listeners
+
   var clickableButtons = document.querySelectorAll('button');
   for (var i=0; i<images.length; i++) {
     clickableButtons[i].addEventListener('click', function() {
-      //   // display image
+    if (counter % 2 === 0 ) {
+      //reveal image
+      console.log("second click");
+      counter++;
+    } else {
     this.className = 'buttonClicked';
-  });}
-    });
+    counter++;
+  }
+  });
+}
+
+});
