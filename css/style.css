@@ -1,0 +1,20 @@
+h1 {
+  color: grey;
+  margin: auto;
+  text-align: center;
+}
+
+#wrapper {
+  background-color: lightgrey;
+  margin: 50px auto;
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+}
+
+button {
+  background-color: darkgrey;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
