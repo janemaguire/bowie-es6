@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // document.getElementsByClass('button').innerHTML = '';
 
   var wrapper = document.getElementById('wrapper');
-  var images = ["alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "alien", "duke", "eyes", "labyrinth", "jack", "ziggy"];
+  var images = ["alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "blackstar", "coat", "alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "blackstar", "coat"];
   var counter = 1;
 
   // create buttons
