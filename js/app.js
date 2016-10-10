@@ -69,6 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var newButton = document.createElement("button");
     // newButton.setAttribute('data-img', images[i]);
     newButton.addEventListener('click', function() {
+
+      if (!this.innerHTML) {
+
       var randomIndex = Math.floor(Math.random() * images.length-1);
       var randomImage = images.splice(randomIndex, 1);
 
@@ -79,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       this.innerHTML = "<a href='#'><img src='images/" + randomImage + ".jpg'></a>";
       counter++;
+    }
     });
     wrapper.appendChild(newButton);
   }
