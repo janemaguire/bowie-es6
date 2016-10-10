@@ -76,15 +76,37 @@ document.addEventListener("DOMContentLoaded", function() {
   var clickableButtons = document.querySelectorAll('button');
   for (var i=0; i<images.length; i++) {
     clickableButtons[i].addEventListener('click', function() {
-    if (counter % 2 === 0 ) {
-      //reveal image
-      console.log("second click");
-      counter++;
-    } else {
-    this.className = 'buttonClicked';
-    counter++;
+      if (counter % 2 === 0 ) {
+        this.style.backgroundImage = "url('images/duke.jpg')";
+        console.log("second click");
+        counter++;
+      } else {
+        this.className = 'buttonClicked';
+        counter++;
+      }
+    });
   }
-  });
-}
 
+
+
+
+function getRandomImage() {
+  for (i=0; i<images.length; i++) {
+    console.log(images[Math.floor(Math.random() * images.length-1)]);
+  }
+}
+randomImageArray =[];
+
+var setTiles = function () {
+  for (var i=0; i<images.length; i++) {
+    var imageLocation = ((Math.floor(Math.random()*images.length)));
+    if ($.inArray(imageLocation, randomImageArray) == -1) {
+      randomImageArray.push(newCard);
+    } else {
+      i--;
+    }
+  }
+  setTiles();
+  console.log(randomImageArray);
+};
 });
