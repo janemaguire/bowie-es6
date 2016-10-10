@@ -9,6 +9,7 @@ body {
 main {
   width: 800px;
   height: 400px;
+  margin: auto;
 }
 
 h1 {
@@ -28,12 +29,20 @@ h1 {
   float: left;
 }
 
-#results {
+#instructions {
   display: inline-block;
   float: right;
   width: 300px;
   margin-top: 50px;
+  margin-right: 20px;
 
+}
+
+#result {
+  display: inline-block;
+  margin: 50px auto;
+  width: 300px;
+  float: right;
 }
 
 button {

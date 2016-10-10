@@ -60,34 +60,33 @@ document.addEventListener("DOMContentLoaded", function() {
   // document.getElementsByClass('button').innerHTML = '';
 
   var wrapper = document.getElementById('wrapper');
-  var images = ["alien", "bolt", "duke", "eyes", "labyrinth", "trousers","alien", "bolt", "duke", "eyes", "labyrinth", "trousers"];
-  var counter = 0;
+  var images = ["alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "alien", "duke", "eyes", "labyrinth", "jack", "ziggy"];
+  var counter = 1;
 
   // create buttons
 
   for (i=0; i<images.length; i++) {
     var newButton = document.createElement("button");
-    newButton.setAttribute('data-img', images[i]);
+    // newButton.setAttribute('data-img', images[i]);
+    newButton.addEventListener('click', function() {
+      var randomIndex = Math.floor(Math.random() * images.length-1);
+      var randomImage = images.splice(randomIndex, 1);
+
+      if (counter % 2 === 0 ) {
+        console.log("second click");
+      } else {
+        console.log("first click");
+      }
+      this.innerHTML = "<a href='#'><img src='images/" + randomImage + ".jpg'></a>";
+      counter++;
+    });
     wrapper.appendChild(newButton);
   }
 
-  // add event listeners
+// Insert an image in the DOM
 
-  var clickableButtons = document.querySelectorAll('button');
-  for (var i=0; i<images.length; i++) {
-    clickableButtons[i].addEventListener('click', function() {
-      if (counter % 2 === 0 ) {
-        this.innerHTML = "<a href='#'><img src='images/" + images[0] + ".jpg'></a>";
-        console.log("second click");
-        counter++;
-      } else {
-        this.className = 'buttonClicked';
-        counter++;
-      }
-    });
-  }
-
-
+// var result = document.getElementById('result');
+// result.innerHTML = "<img src='https://1.bp.blogspot.com/-MpnaAEObdws/VyfEFRLtbyI/AAAAAAAADxM/bDJN44Vvgf0u3KxcqnY2gcPzLmTofPDPwCKgB/s1600/29.%2B%25E2%2580%259CI%2Bdon%2527t%2Bknow%2Bwhere%2BI%2527m%2Bgoing%2Bfrom%2Bhere%252C%2Bbut%2BI%2Bpromise%2Bit%2Bwon%2527t%2Bbe%2Bboring.%25E2%2580%259D%2B%25E2%2580%2595%2BDavid%2BBowie.JPG'>";
 
 //
 // function getRandomImage() {
