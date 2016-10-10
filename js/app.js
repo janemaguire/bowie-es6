@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
   for (var i=0; i<images.length; i++) {
     clickableButtons[i].addEventListener('click', function() {
       if (counter % 2 === 0 ) {
-        this.innerHTML = "<a href='#'><img src='images/duke.jpg'></a>";
+        this.innerHTML = "<a href='#'><img src='images/" + images[0] + ".jpg'></a>";
         console.log("second click");
         counter++;
       } else {
