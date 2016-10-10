@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
   for (var i=0; i<images.length; i++) {
     clickableButtons[i].addEventListener('click', function() {
       if (counter % 2 === 0 ) {
-        this.style.backgroundImage = "url('images/duke.jpg')";
+        this.innerHTML = "<a href='#'><img src='images/duke.jpg'></a>";
         console.log("second click");
         counter++;
       } else {
@@ -89,24 +89,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-function getRandomImage() {
-  for (i=0; i<images.length; i++) {
-    console.log(images[Math.floor(Math.random() * images.length-1)]);
-  }
-}
-randomImageArray =[];
-
-var setTiles = function () {
-  for (var i=0; i<images.length; i++) {
-    var imageLocation = ((Math.floor(Math.random()*images.length)));
-    if ($.inArray(imageLocation, randomImageArray) == -1) {
-      randomImageArray.push(newCard);
-    } else {
-      i--;
-    }
-  }
-  setTiles();
-  console.log(randomImageArray);
-};
+//
+// function getRandomImage() {
+//   for (i=0; i<images.length; i++) {
+//     console.log(images[Math.floor(Math.random() * images.length-1)]);
+//   }
+// }
+// randomImageArray =[];
+//
+// var setTiles = function () {
+//   for (var i=0; i<images.length; i++) {
+//     var imageLocation = ((Math.floor(Math.random()*images.length)));
+//     if ($.inArray(imageLocation, randomImageArray) == -1) {
+//       randomImageArray.push(newCard);
+//     } else {
+//       i--;
+//     }
+//   }
+//   setTiles();
+//   console.log(randomImageArray);
+// };
 });
