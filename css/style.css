@@ -20,7 +20,6 @@ h1 {
 }
 
 #wrapper {
-  background-color: lightgrey;
   margin: 10px;
   width: 400px;
   height: 400px;
@@ -46,7 +45,7 @@ h1 {
 }
 
 button {
-  background-color: darkgrey;
+  background-image: url("../images/back.jpg");
   height: 100px;
   width: 100px;
   border: 1px solid black;
