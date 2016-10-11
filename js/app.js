@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   for (i=0; i<images.length; i++) {
     var newButton = document.createElement("button");
+    // newButton.innerHTML = "<img src='images/back.jpg'>";
     newButton.setAttribute('data-img', images[i]);
     newButton.addEventListener('click', function() {
       var selection = this.getAttribute('data-img');
@@ -124,6 +125,14 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
     wrapper.appendChild(newButton);
+
+    // if all buttons have innerHTML return message
+  }
+
+  if (document.querySelectorAll('button').innerHTML) {
+    console.log("winner");
+  } else {
+    console.log("not yet");
   }
 
   // Insert an image in the DOM
