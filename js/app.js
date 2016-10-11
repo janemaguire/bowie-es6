@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
       clickedElements.push(this);
       console.log("MOVES:", moves);
       if (!this.innerHTML) {
-        this.innerHTML = "<a href='#'><img src='images/" + selection + ".jpg'></a>";
+        this.innerHTML = "<a class='clicked' href='#'><img src='images/" + selection + ".jpg'></a>";
         // var randomIndex = Math.floor(Math.random() * images.length-1);
         // var randomImage = images.splice(randomIndex, 1);
 
@@ -116,6 +116,13 @@ document.addEventListener("DOMContentLoaded", function() {
               clickedElements = [];
             }, 1000);
           }
+          var matchedElements = document.getElementsByClassName('clicked');
+          if (matchedElements.length === 16) {
+            var result = document.getElementById('result');
+            result.innerHTML = "<img src='https://1.bp.blogspot.com/-MpnaAEObdws/VyfEFRLtbyI/AAAAAAAADxM/bDJN44Vvgf0u3KxcqnY2gcPzLmTofPDPwCKgB/s1600/29.%2B%25E2%2580%259CI%2Bdon%2527t%2Bknow%2Bwhere%2BI%2527m%2Bgoing%2Bfrom%2Bhere%252C%2Bbut%2BI%2Bpromise%2Bit%2Bwon%2527t%2Bbe%2Bboring.%25E2%2580%259D%2B%25E2%2580%2595%2BDavid%2BBowie.JPG'>";
+            console.log("winner");
+          }
+
 
         } else {
           console.log("first click");
@@ -129,16 +136,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // if all buttons have innerHTML return message
   }
 
-  if (document.querySelectorAll('button').innerHTML) {
-    console.log("winner");
-  } else {
-    console.log("not yet");
-  }
+
+
+
+  // if (document.querySelectorAll('button').innerHTML) {
+  //   console.log("winner");
+  // } else {
+  //   console.log("not yet");
+  // }
 
   // Insert an image in the DOM
 
-  // var result = document.getElementById('result');
-  // result.innerHTML = "<img src='https://1.bp.blogspot.com/-MpnaAEObdws/VyfEFRLtbyI/AAAAAAAADxM/bDJN44Vvgf0u3KxcqnY2gcPzLmTofPDPwCKgB/s1600/29.%2B%25E2%2580%259CI%2Bdon%2527t%2Bknow%2Bwhere%2BI%2527m%2Bgoing%2Bfrom%2Bhere%252C%2Bbut%2BI%2Bpromise%2Bit%2Bwon%2527t%2Bbe%2Bboring.%25E2%2580%259D%2B%25E2%2580%2595%2BDavid%2BBowie.JPG'>";
+
 
   //
   // function getRandomImage() {
@@ -160,4 +169,8 @@ document.addEventListener("DOMContentLoaded", function() {
   //   setTiles();
   //   console.log(randomImageArray);
   // };
+
+
+
+
 });
