@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
           var matchedElements = document.getElementsByClassName('clicked');
           if (matchedElements.length === 16) {
             var result = document.getElementById('result');
-            result.innerHTML = "<img src='https://1.bp.blogspot.com/-MpnaAEObdws/VyfEFRLtbyI/AAAAAAAADxM/bDJN44Vvgf0u3KxcqnY2gcPzLmTofPDPwCKgB/s1600/29.%2B%25E2%2580%259CI%2Bdon%2527t%2Bknow%2Bwhere%2BI%2527m%2Bgoing%2Bfrom%2Bhere%252C%2Bbut%2BI%2Bpromise%2Bit%2Bwon%2527t%2Bbe%2Bboring.%25E2%2580%259D%2B%25E2%2580%2595%2BDavid%2BBowie.JPG'>";
+            result.innerHTML = "Well done, contact made!" + "<img src='https://1.bp.blogspot.com/-MpnaAEObdws/VyfEFRLtbyI/AAAAAAAADxM/bDJN44Vvgf0u3KxcqnY2gcPzLmTofPDPwCKgB/s1600/29.%2B%25E2%2580%259CI%2Bdon%2527t%2Bknow%2Bwhere%2BI%2527m%2Bgoing%2Bfrom%2Bhere%252C%2Bbut%2BI%2Bpromise%2Bit%2Bwon%2527t%2Bbe%2Bboring.%25E2%2580%259D%2B%25E2%2580%2595%2BDavid%2BBowie.JPG'>";
             console.log("winner");
           }
 
@@ -133,44 +133,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     wrapper.appendChild(newButton);
 
-    // if all buttons have innerHTML return message
   }
-
-
-
-
-  // if (document.querySelectorAll('button').innerHTML) {
-  //   console.log("winner");
-  // } else {
-  //   console.log("not yet");
-  // }
-
-  // Insert an image in the DOM
-
-
-
-  //
-  // function getRandomImage() {
-  //   for (i=0; i<images.length; i++) {
-  //     console.log(images[Math.floor(Math.random() * images.length-1)]);
-  //   }
-  // }
-  // randomImageArray =[];
-  //
-  // var setTiles = function () {
-  //   for (var i=0; i<images.length; i++) {
-  //     var imageLocation = ((Math.floor(Math.random()*images.length)));
-  //     if ($.inArray(imageLocation, randomImageArray) == -1) {
-  //       randomImageArray.push(newCard);
-  //     } else {
-  //       i--;
-  //     }
-  //   }
-  //   setTiles();
-  //   console.log(randomImageArray);
-  // };
-
-
-
+    var resetButton = document.getElementById("reset");
+    resetButton.addEventListener('click', function() {
+      location.reload();
+    });
 
 });
