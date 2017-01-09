@@ -27,8 +27,8 @@ p {
 
 #wrapper {
   margin: 10px;
-  width: 400px;
-  height: 400px;
+  width: 408px;
+  height: 408px;
   border: 1px solid black;
   display: inline-block;
   float: left;
@@ -46,9 +46,16 @@ p {
 
 button {
   background-image: url("../images/back.jpg");
-  height: 100px;
-  width: 100px;
+  height: 102px;
+  width: 102px;
   border: 1px solid black;
+  position: relative;
+}
+
+.clicked {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 #reset {
