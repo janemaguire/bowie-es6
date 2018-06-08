@@ -25,14 +25,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Create buttons, set a data attribute and add event listener
 
-
-  for (i=0; i<images.length; i++) {
+  images.forEach(function(image) {
     let newButton = document.createElement("button");
-    newButton.setAttribute('data-img', images[i]);
+    newButton.setAttribute('data-img', image);
     newButton.addEventListener('click', function() {
 
       // On click use data attribute to push selected data into moves array and selected button into clickedElements array
-      var selection = this.getAttribute('data-img');
+      let selection = this.getAttribute('data-img');
       moves.push(selection);
       clickedElements.push(this);
 
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
 
           // Select buttons, if all 16 are displayed as part of a match, display the winning image
-          var matchedElements = document.getElementsByClassName('clicked');
+          let matchedElements = document.getElementsByClassName('clicked');
           if (matchedElements.length === 16) {
             var result = document.getElementById('result');
             result.innerHTML = "Well done, contact made!" + "<img src='https://1.bp.blogspot.com/-MpnaAEObdws/VyfEFRLtbyI/AAAAAAAADxM/bDJN44Vvgf0u3KxcqnY2gcPzLmTofPDPwCKgB/s1600/29.%2B%25E2%2580%259CI%2Bdon%2527t%2Bknow%2Bwhere%2BI%2527m%2Bgoing%2Bfrom%2Bhere%252C%2Bbut%2BI%2Bpromise%2Bit%2Bwon%2527t%2Bbe%2Bboring.%25E2%2580%259D%2B%25E2%2580%2595%2BDavid%2BBowie.JPG'>";
@@ -74,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     // Add buttons created inside wrapper
     wrapper.appendChild(newButton);
+  })
 
-  }
     // Reset button, if clicked reload page
     let resetButton = document.getElementById("reset");
     resetButton.addEventListener('click', function() {
