@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // If the button is empty, assign an image based on it's data attribute
       if (!this.innerHTML) {
-        this.innerHTML = "<a class='clicked' href='#'><img src='images/" + selection + ".jpg'></a>";
+        this.innerHTML = `<a class='clicked' href='#'><img src='images/${selection}.jpg'></a>`;
 
         // If it is an even numbered click
         if (counter % 2 === 0 ) {
