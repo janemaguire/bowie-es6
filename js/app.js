@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Fisher Yates Shuffle
   function shuffle(array) {
-    var m = array.length, t, i;
+    let m = array.length, t, i;
     // While there remain elements to shuffle…
     while (m) {
       // Pick a remaining element…
@@ -16,16 +16,18 @@ document.addEventListener("DOMContentLoaded", function() {
     return array;
   }
 
-  var wrapper = document.getElementById('wrapper');
-  var images = ["alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "blackstar", "coat", "alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "blackstar", "coat"];
+  let wrapper = document.getElementById('wrapper');
+  let images = ["alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "blackstar", "coat", "alien", "duke", "eyes", "labyrinth", "jack", "ziggy", "blackstar", "coat"];
   images = shuffle(images);
-  var counter = 1;
-  var moves = [];
-  var clickedElements = [];
+  let counter = 1;
+  let moves = [];
+  let clickedElements = [];
 
   // Create buttons, set a data attribute and add event listener
+
+
   for (i=0; i<images.length; i++) {
-    var newButton = document.createElement("button");
+    let newButton = document.createElement("button");
     newButton.setAttribute('data-img', images[i]);
     newButton.addEventListener('click', function() {
 
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }
     // Reset button, if clicked reload page
-    var resetButton = document.getElementById("reset");
+    let resetButton = document.getElementById("reset");
     resetButton.addEventListener('click', function() {
       location.reload();
     });
